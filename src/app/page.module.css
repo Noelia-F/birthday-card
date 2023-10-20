@@ -4,9 +4,19 @@
   padding: 2rem;
 }
 
+.card, .form {
+  min-width: 50%;
+  padding: 1rem;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #333;
+}
+
 .logo {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
 }
 
 .text {

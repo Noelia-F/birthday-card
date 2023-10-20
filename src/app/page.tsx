@@ -1,24 +1,53 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+'use client'
+
+import Image from 'next/image';
+import styles from './page.module.css';
+import { useState } from 'react';
 
 export default function Home() {
+
+  const defaultInfo = {
+    upperIntro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non.',
+    title: 'Lorem ipsum dolor sit amet',
+    extraHighlightText: '2020',
+    intro: 'Lorem ipsum dolor sit amet.',
+  }
+
+  const [info, setInfo] = useState(defaultInfo);
+
   return (
     <main className={styles.main}>
-      <article>
-        <section>
+      <article className={styles.card}>
+        <section className={styles.section}>
           <img className={styles.logo} src="https://picsum.photos/id/237/100/100" alt='logo' />
-          <p className={styles.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non.</p>
-          <h1 className={styles.title}>Lorem ipsum dolor sit amet</h1>
-          <p>2020</p>
+          <p className={styles.text}>{info.upperIntro}</p>
+          <h1 className={styles.title}>{info.title}</h1>
+          <p>{info.extraHighlightText}</p>
         </section>
-        <section>
-          <p className={styles.text}>Lorem ipsum dolor sit amet.</p>
+        <section className={styles.section}>
+          <p className={styles.text}>{styles.intro}</p>
           <h2 className={styles.subtitle}>20-25 april 2pm-6pm</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <h2 className={styles.subtitle}>contact</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </section>
       </article>
+      <form className={styles.form}>
+        <label>Upper Intro</label>
+        <input type="text" id="fname" name="fname" />
+        <label>Title</label>
+        <input type="text" id="lname" name="lname" />
+        <label>Extra highlight text</label>
+        <input type="text" id="lname" name="lname" />
+        <label>Info Intro</label>
+        <input type="text" id="lname" name="lname" />
+        <label>Info Date</label>
+        <input type="text" id="lname" name="lname" />
+        <label>Info Direction</label>
+        <input type="text" id="lname" name="lname" />
+        <label>Info Contact</label>
+        <input type="text" id="lname" name="lname" />
+      </form>
     </main>
     /* <main className={styles.main}>
       <div className={styles.description}>
