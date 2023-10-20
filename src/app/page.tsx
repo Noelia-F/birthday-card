@@ -4,6 +4,23 @@ import styles from './page.module.css'
 export default function Home() {
   return (
     <main className={styles.main}>
+      <article>
+        <section>
+          <img className={styles.logo} src="https://picsum.photos/id/237/100/100" alt='logo' />
+          <p className={styles.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non.</p>
+          <h1 className={styles.title}>Lorem ipsum dolor sit amet</h1>
+          <p>2020</p>
+        </section>
+        <section>
+          <p className={styles.text}>Lorem ipsum dolor sit amet.</p>
+          <h2 className={styles.subtitle}>20-25 april 2pm-6pm</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h2 className={styles.subtitle}>contact</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+      </article>
+    </main>
+    /* <main className={styles.main}>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -90,6 +107,6 @@ export default function Home() {
           </p>
         </a>
       </div>
-    </main>
+    </main> */
   )
 }
