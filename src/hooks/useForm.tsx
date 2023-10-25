@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-interface FormData {
+export interface FormData {
   upperIntro: string;
   title: string;
   highlightText: string;
